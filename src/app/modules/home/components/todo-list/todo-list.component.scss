@@ -1,0 +1,38 @@
+@import '../../../../../dist/scss/variables.scss';
+
+
+
+
+
+section{
+  width: 100%;
+  min-height: 250px;
+
+  background: $secondary-background-color;
+  margin-top: 20px;
+
+  div{
+    vertical-align: center;
+    h3{
+      text-align: center;
+      vertical-align: center;
+    }
+  }
+
+
+  ul{
+    padding: 20px;
+
+    li{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+    }
+
+  }
+
+
+
+}

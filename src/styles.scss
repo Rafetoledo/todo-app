@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import './dist/scss/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,900;1,100&display=swap');
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+  font-weight: 400;
+}
+
+body{
+  background: $secondary-background-color;
+}
+
+.container{
+  width: 350px;
+  margin: 50px auto;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,35 @@
+
+<section>
+  <div class="message-txt" *ngIf="!taskList.length" fxFlexAlign="center">
+    <h3 text-align="center" >There is no task</h3>
+  </div>
+
+  <ul *ngIf="taskList.length">
+    <li *ngFor="let item of taskList; let i = index">
+
+      <mat-checkbox
+        class="status-checkbox"
+        box-shadow = "0 0 2px #ccc"
+        [(ngModel)]="item.checked"
+      >
+      </mat-checkbox>
+      <input
+        type="text"
+        [(ngModel)]="item.task"
+        (keyup)="validationInput(item.task, i)"
+      >
+      <button  class="delete-button" mat-icon-button (click)="deleteTask(i)">
+        <mat-icon class="mat-18">delete</mat-icon>
+      </button>
+
+
+
+    </li>
+  </ul>
+
+</section>
+
+
+<app-todo-input-add-items (emitItemTaskList)="addTask($event)"></app-todo-input-add-items>
+<app-todo-button-delete-all *ngIf="taskList.length" (click)="deleteAll()" ></app-todo-button-delete-all>
+
